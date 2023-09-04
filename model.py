@@ -82,3 +82,7 @@ hist = model_CNN.fit(train_data,
                     validation_data = validation_data,
                     validation_steps = int(0.5 * len(validation_data))
                     )
+
+save_path = '/content/drive/MyDrive/DeepFake_Image_Detection-EDI_Project_66/epoch1.h5'  
+# Save the model to the specified path
+model_CNN.save(save_path)
