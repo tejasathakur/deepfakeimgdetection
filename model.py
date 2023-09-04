@@ -72,7 +72,7 @@ model_CNN.compile(optimizer = tf.keras.optimizers.Adam(),
                 metrics=['accuracy'])
 hist = model_CNN.fit(train_data,
                     # @markdown Epochs
-                    epochs = 1 # @param {type:"slider", min:0, max:70, step:1}
+                    epochs = 1, # @param {type:"slider", min:0, max:70, step:1}
                     validation_data = validation_data,
                     validation_steps = int(0.5 * len(validation_data))
                     )
