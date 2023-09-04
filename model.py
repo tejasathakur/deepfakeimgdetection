@@ -7,6 +7,12 @@ from tensorflow.keras import layers
 from tensorflow.keras.layers import Activation, Conv2D, Dense, Flatten, MaxPooling2D
 from tensorflow.keras.models import Sequential
 
+data_dir = "/content/Dataset" # @param {type:"string"}
+train_dir = os.path.join(data_dir, "Train")
+test_dir = os.path.join(data_dir, "Test")
+validation_dir = os.path.join(data_dir, "Validation")
+subfolders = ["Fake", "Real"]
+
 def normalize_image(image, labels):
     image = tf.cast(image, tf.float32) / 255.0
     return image, labels
